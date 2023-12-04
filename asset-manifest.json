@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/test/static/css/main.5f171742.css",
-    "main.js": "/test/static/js/main.d6fa5276.js",
+    "main.css": "/test/static/css/main.c52e0faf.css",
+    "main.js": "/test/static/js/main.20d77f3f.js",
     "static/media/smile_white.svg": "/test/static/media/smile_white.2ec833bc26238bb98844efc009d8d189.svg",
     "static/media/sended-file.svg": "/test/static/media/sended-file.0968181d8dd5929dc080.svg",
     "static/media/clip.svg": "/test/static/media/clip.5bf6dafd7fae5fc8ab4f.svg",
@@ -11,11 +11,11 @@
     "static/media/arrow.svg": "/test/static/media/arrow.875a4e5a99195c17411f.svg",
     "static/media/angle_message.svg": "/test/static/media/angle_message.5e8166c566c470512b23.svg",
     "static/media/Ellipse 19.svg": "/test/static/media/Ellipse 19.7392f84c554279465262.svg",
-    "main.5f171742.css.map": "/test/static/css/main.5f171742.css.map",
-    "main.d6fa5276.js.map": "/test/static/js/main.d6fa5276.js.map"
+    "main.c52e0faf.css.map": "/test/static/css/main.c52e0faf.css.map",
+    "main.20d77f3f.js.map": "/test/static/js/main.20d77f3f.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f171742.css",
-    "static/js/main.d6fa5276.js"
+    "static/css/main.c52e0faf.css",
+    "static/js/main.20d77f3f.js"
   ]
 }
