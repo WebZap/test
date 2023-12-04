@@ -436,6 +436,9 @@ input[type='file'] {
 		width: 100%;
 		background-color: chocolate;
 	}
+	&__container-send {
+		position: relative;
+	}
 	&__send {
 		height: 60px;
 		width: 100%;

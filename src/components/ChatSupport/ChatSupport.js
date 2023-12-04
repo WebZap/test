@@ -415,10 +415,18 @@ const ChatSupport = () => {
 											</li>
 										</ul>
 									</div>
-									<input
-										className='chat__send'
-										placeholder='Написать сообщение...'
-									/>
+									<div className='chat__container-send'>
+										<input
+											className='chat__send'
+											placeholder='Написать сообщение...'
+										/>
+										<div className='container-tools'>
+											<label className='container-tools__clip'>
+												<input type='file' accept='.txt, .pdf, .doc' />
+											</label>
+											<button className='container-tools__send-button arrow-button ' />
+										</div>
+									</div>
 								</div>
 							</div>
 						</section>
