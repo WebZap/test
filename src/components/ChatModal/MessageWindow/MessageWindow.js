@@ -1,4 +1,4 @@
-import MessageList from './MessageList/MessageList'
+import MessageList from './MessageList/SupportMessage/MessageList'
 import React from 'react'
 import SendField from './SendField/SendField'
 

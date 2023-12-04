@@ -25,19 +25,18 @@ button {
 }
 
 textarea {
-	width: 300px; /* Ширина текстовой области */
-	height: 150px; /* Высота текстовой области */
-	padding: 10px; /* Внутренний отступ текстовой области */
-	font-size: 16px; /* Размер шрифта текстовой области */
-	border: 1px solid #ccc; /* Граница текстовой области */
-	border-radius: 5px; /* Закругление углов текстовой области */
-	resize: vertical; /* Разрешение изменения высоты (можно использовать "none", "horizontal" или "both") */
+	width: 300px;
+	height: 150px;
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	resize: vertical;
 }
 
-/* Стили для активной (фокусированной) текстовой области */
 textarea:focus {
-	border-color: #007bff; /* Цвет границы при фокусировке */
-	box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при фокусировке */
+	border-color: #007bff;
+	box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 input[type='file'] {
@@ -85,28 +84,31 @@ input[type='file'] {
 			height: 0;
 		}
 	}
-	&__message {
-		display: flex;
-		align-items: flex-end;
-		justify-content: space-between;
-		width: 100%;
-		margin-top: 25px;
-		&_rev {
-			flex-direction: row-reverse;
-		}
-	}
+	// &__message {
+	// 	display: flex;
+	// 	align-items: flex-end;
+	// 	justify-content: space-between;
+	// 	width: 100%;
+	// 	margin-top: 25px;
+	// 	&_rev {
+	// 		flex-direction: row-reverse;
+	// 	}
+	// }
 }
 
 .message-input {
 	position: relative;
 	&__input {
+		// display: flex;
+		// text-align: center;
+		// justify-content: flex-start;
 		margin-top: 15px;
 		font-family: Roboto;
 		line-height: 18px;
 		word-wrap: break-word;
 		word-break: break-word;
 		white-space: pre-wrap;
-		padding: 10px 101px 10px 15px;
+		padding: 16px 101px 10px 22px;
 		resize: none;
 		font-size: 14px;
 		width: 100%;
@@ -115,14 +117,14 @@ input[type='file'] {
 		height: 52px;
 
 		&::placeholder {
+			color: #b7b7b7;
+			font-family: Roboto;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 22px; /* 137.5% */
 			position: absolute;
 			text-align: center;
-			color: #000;
-			font-family: Roboto;
-			font-size: 14px;
-			font-style: normal;
-			font-weight: 200;
-			line-height: 30px;
 		}
 
 		&::-webkit-scrollbar {
@@ -158,13 +160,53 @@ input[type='file'] {
 	}
 }
 
-.message-support {
-	&__image {
+/*=============================================
+=            CLIENT
+// <li className='message-window__message  message-support message-support_rev'>
+// 	<div className='message-support__container-body'>
+// 		<div className='message-support__body message-support__body_long'>
+// 			Lorem Ipsum is simply dummy text of the printing and typesetting
+// 			industry. Lorem Ipsum has been the industry's standard dummy text
+// 		</div>
+// 	</div>
+// 	<div className='message-support__time'>11:28</div>
+// </li>
+=
+=============================================*/
+
+/*=============================================
+=            SUPPORT
+
+/ 		<li className='message-window__message message message--support'>
+// 			<div className='message__image-support'>
+// 				<img src={iconSupport} />
+// 			</div>
+// 			<div className='message__body messagebody--support'>
+// 				<div className='message__text'>{text}</div>
+// 				<div className='message__time'>11:28</div>
+// 			</div>
+// 		</li>
+
+=
+=============================================*/
+.message {
+	display: flex;
+	align-items: flex-end;
+	width: 100%;
+	margin-top: 25px;
+	&--support {
+		align-items: flex-end;
+		justify-content: flex-start;
+	}
+	&--client {
+		flex-direction: row-reverse;
+	}
+	&__image-support {
 		width: 55px;
 		height: 55px;
 		border-radius: 50%;
 	}
-	&__image > img {
+	&__image-support > img {
 		width: 100%;
 		height: 100%;
 		border-radius: 50%;
@@ -174,31 +216,46 @@ input[type='file'] {
 		-ms-border-radius: 50%;
 		-o-border-radius: 50%;
 	}
-	&__body {
-		display: inline-block;
+	&__text {
 		word-wrap: break-word;
-		width: 316px;
 		min-height: 100%;
 		padding: 8px 26px;
-		align-items: center;
 		border-radius: 20px;
-		background: #f3f3f3;
-		color: #000;
 		font-family: Roboto;
 		font-size: 15px;
-		font-style: normal;
 		font-weight: 400;
-		line-height: normal;
-		-webkit-border-radius: 20px;
-		-moz-border-radius: 20px;
-		-ms-border-radius: 20px;
-		-o-border-radius: 20px;
-		&_long {
+		&--main-chat-support {
+			margin-left: 20px;
+			background: #f6f6f6;
+			color: #000;
+			max-width: 600px;
+		}
+		&--main-chat-client {
 			position: relative;
-			width: 100%;
 			background: #dfe6ff;
 			margin-right: 15px;
 			margin-left: 5px;
+			max-width: 600px;
+			&::before {
+				content: url('../../assets/icons/angle_message.svg');
+				position: absolute;
+				bottom: -4.7px;
+				right: -13px;
+			}
+		}
+		&--support {
+			margin-left: 20px;
+			background: #f3f3f3;
+			color: #000;
+			max-width: 280px;
+		}
+		&--client {
+			position: relative;
+			background: #dfe6ff;
+			margin-right: 15px;
+			margin-left: 5px;
+			max-width: 330px;
+
 			&::before {
 				content: url('../../assets/icons/angle_message.svg');
 				position: absolute;
@@ -207,6 +264,17 @@ input[type='file'] {
 			}
 		}
 	}
+	&__body {
+		width: 100%;
+		display: flex;
+		&--support {
+			justify-content: space-between;
+		}
+		&--client {
+			justify-content: flex-end;
+		}
+	}
+
 	&__time {
 		display: flex;
 		width: 45px;
